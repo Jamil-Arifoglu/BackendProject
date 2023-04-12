@@ -1,32 +1,33 @@
 ﻿
+using Foxic.DAL;
+using Foxic.Entities;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 
 namespace Foxic.Controllers
 {
-    public class FoxicController : Controller
-    {
-        private readonly ILogger<FoxicController> _logger;
+	public class FoxicController : Controller
+	{
+		private FoxicDbContext _context;
 
-        public FoxicController(ILogger<FoxicController> logger)
-        {
-            _logger = logger;
-        }
+		public FoxicController(FoxicDbContext context)
+		{
+			_context = context;
+		}
 
-        public IActionResult Index()
-        {
-            return View();
-        }
+		public IActionResult Index()
+		{
+			List<Slider> slider = _context.sliders.OrderBy(s => s.Order).ToList();
+			ViewBag.RelatedPlants = _context.clothes
+.Include(p => p.ClothesImage)
+.Include(pc => pc.ClothesCollection).ThenInclude(c => c.Collection)
+					  .Take(8)
+					  .ToList();
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
+			return View(slider);
+		}
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
-    }
+
+	}
 }

@@ -1,7 +1,40 @@
+﻿using Foxic.DAL;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using P230_Pronia.Services;
+using System.Text.Json.Serialization;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+
+builder.Services.AddControllersWithViews().AddJsonOptions(options =>
+{
+    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+});
+builder.Services.AddDbContext<FoxicDbContext>(opt =>
+{
+    opt.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
+});
+
+//builder.Services.AddIdentity<User>, IdentityRole>(opt =>
+//{
+//    opt.Password.RequiredUniqueChars = 2;
+//    opt.Password.RequireNonAlphanumeric = false;
+//    opt.Password.RequiredLength = 8;
+//    opt.Password.RequireDigit = true;
+//    opt.Password.RequireLowercase = true;
+//    opt.Password.RequireUppercase = false;
+
+//    opt.User.AllowedUserNameCharacters = "qüertyuiopöğasdfghjklıəzxcvbnmçş_";
+//    opt.User.RequireUniqueEmail = true;
+
+//    opt.Lockout.AllowedForNewUsers = true;
+//    opt.Lockout.MaxFailedAccessAttempts = 4;
+//    opt.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromSeconds(20);
+//}).AddDefaultTokenProviders().AddEntityFrameworkStores<FoxicDbContext>();
+builder.Services.AddScoped<LayoutService>();
+builder.Services.AddHttpContextAccessor();
 
 var app = builder.Build();
 
@@ -20,8 +53,14 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-app.MapControllerRoute(
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllerRoute(
+      name: "areas",
+      pattern: "{area:exists}/{controller=Foxic}/{action=Index}/{id?}"
+    );
+    endpoints.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
-
+    pattern: "{controller=Foxic}/{action=Index}/{id?}");
+});
 app.Run();
