@@ -2,12 +2,12 @@
 
 namespace Foxic.Entities
 {
-    public class ClothesCollection : BaseEntity
-    {
-        public int CollectionId { get; set; }
-        public Collection Collection { get; set; }
+	public class ClothesCatagory : BaseEntity
+	{
 
-        public Clothes Clothes { get; set; }
+		public Catagory Catagory { get; set; }
 
-    }
+		public Clothes Clothes { get; set; }
+
+	}
 }

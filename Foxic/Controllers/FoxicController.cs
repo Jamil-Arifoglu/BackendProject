@@ -16,14 +16,15 @@ namespace Foxic.Controllers
 			_context = context;
 		}
 
-		public IActionResult Index()
+		public IActionResult Index(int id)
 		{
-			List<Slider> slider = _context.sliders.OrderBy(s => s.Order).ToList();
-			ViewBag.RelatedPlants = _context.clothes
-.Include(p => p.ClothesImage)
-.Include(pc => pc.ClothesCollection).ThenInclude(c => c.Collection)
-					  .Take(8)
-					  .ToList();
+			List<Slider> slider = _context.Sliders.OrderBy(s => s.Order).ToList();
+
+			ViewBag.RelatedClothes = _context.Clothes
+					.Include(p => p.ClothesImage)
+												.OrderByDescending(p => p.Id)
+													.Take(8)
+														.ToList();
 
 			return View(slider);
 		}

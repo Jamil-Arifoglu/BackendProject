@@ -22,6 +22,23 @@ namespace Foxic.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("Foxic.Entities.Catagory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Catagory");
+                });
+
             modelBuilder.Entity("Foxic.Entities.Clothes", b =>
                 {
                     b.Property<int>("Id")
@@ -40,6 +57,9 @@ namespace Foxic.Migrations
                     b.Property<int>("ClothesGlobalTabId")
                         .HasColumnType("int");
 
+                    b.Property<int>("CollectionId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -50,12 +70,8 @@ namespace Foxic.Migrations
                     b.Property<decimal?>("DiscountPrice")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<string>("Instruction")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool?>("IsStok")
-                        .HasColumnType("bit");
+                    b.Property<int>("InstructionId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -75,18 +91,18 @@ namespace Foxic.Migrations
                     b.Property<int?>("Stok")
                         .HasColumnType("int");
 
-                    b.Property<string>("discountRate")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("Id");
 
                     b.HasIndex("ClothesGlobalTabId");
 
-                    b.ToTable("clothes");
+                    b.HasIndex("CollectionId");
+
+                    b.HasIndex("InstructionId");
+
+                    b.ToTable("Clothes");
                 });
 
-            modelBuilder.Entity("Foxic.Entities.ClothesCollection", b =>
+            modelBuilder.Entity("Foxic.Entities.ClothesCatagory", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -94,19 +110,19 @@ namespace Foxic.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int>("ClothesId")
+                    b.Property<int>("CatagoryId")
                         .HasColumnType("int");
 
-                    b.Property<int>("CollectionId")
+                    b.Property<int>("ClothesId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CatagoryId");
+
                     b.HasIndex("ClothesId");
 
-                    b.HasIndex("CollectionId");
-
-                    b.ToTable("ClothesCollections");
+                    b.ToTable("ClothesCatagory");
                 });
 
             modelBuilder.Entity("Foxic.Entities.ClothesColorSize", b =>
@@ -219,7 +235,7 @@ namespace Foxic.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("collections");
+                    b.ToTable("Collections");
                 });
 
             modelBuilder.Entity("Foxic.Entities.Color", b =>
@@ -241,6 +257,23 @@ namespace Foxic.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Colors");
+                });
+
+            modelBuilder.Entity("Foxic.Entities.Instruction", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Instructions");
                 });
 
             modelBuilder.Entity("Foxic.Entities.Setting", b =>
@@ -313,7 +346,7 @@ namespace Foxic.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("sliders");
+                    b.ToTable("Sliders");
                 });
 
             modelBuilder.Entity("Foxic.Entities.Tag", b =>
@@ -539,26 +572,42 @@ namespace Foxic.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("ClothesGlobalTab");
-                });
-
-            modelBuilder.Entity("Foxic.Entities.ClothesCollection", b =>
-                {
-                    b.HasOne("Foxic.Entities.Clothes", "Clothes")
-                        .WithMany("ClothesCollection")
-                        .HasForeignKey("ClothesId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("Foxic.Entities.Collection", "Collection")
-                        .WithMany("ClothesCollection")
+                        .WithMany("Clothes")
                         .HasForeignKey("CollectionId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Clothes");
+                    b.HasOne("Foxic.Entities.Instruction", "Instruction")
+                        .WithMany("Clothes")
+                        .HasForeignKey("InstructionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ClothesGlobalTab");
 
                     b.Navigation("Collection");
+
+                    b.Navigation("Instruction");
+                });
+
+            modelBuilder.Entity("Foxic.Entities.ClothesCatagory", b =>
+                {
+                    b.HasOne("Foxic.Entities.Catagory", "Catagory")
+                        .WithMany("ClothesCatagory")
+                        .HasForeignKey("CatagoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Foxic.Entities.Clothes", "Clothes")
+                        .WithMany("ClothesCatagory")
+                        .HasForeignKey("ClothesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Catagory");
+
+                    b.Navigation("Clothes");
                 });
 
             modelBuilder.Entity("Foxic.Entities.ClothesColorSize", b =>
@@ -669,9 +718,14 @@ namespace Foxic.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Foxic.Entities.Catagory", b =>
+                {
+                    b.Navigation("ClothesCatagory");
+                });
+
             modelBuilder.Entity("Foxic.Entities.Clothes", b =>
                 {
-                    b.Navigation("ClothesCollection");
+                    b.Navigation("ClothesCatagory");
 
                     b.Navigation("ClothesColorSize");
 
@@ -687,12 +741,17 @@ namespace Foxic.Migrations
 
             modelBuilder.Entity("Foxic.Entities.Collection", b =>
                 {
-                    b.Navigation("ClothesCollection");
+                    b.Navigation("Clothes");
                 });
 
             modelBuilder.Entity("Foxic.Entities.Color", b =>
                 {
                     b.Navigation("ClothesColorSize");
+                });
+
+            modelBuilder.Entity("Foxic.Entities.Instruction", b =>
+                {
+                    b.Navigation("Clothes");
                 });
 
             modelBuilder.Entity("Foxic.Entities.Size", b =>
