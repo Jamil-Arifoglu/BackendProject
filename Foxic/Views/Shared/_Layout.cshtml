@@ -176,7 +176,7 @@
 							<!--mmenu-->
 							<ul class="mmenu mmenu-js">
 								<li class="mmenu-item--simple">
-									<a href="#" class="active">Home</a>
+									<a asp-controller="Foxic" asp-action="index" class="active" >Home</a>
 									<div class="mmenu-submenu d-flex">
 										<ul class="submenu-list mt-0">
 											<li><a href="index.html">Fashion (Default) Skin</a><span class="submenu-link-image"><img src="~/assest//screen/screen01.png" alt=""></span></li>
@@ -211,11 +211,11 @@
 									</div>
 								</li>
 								<li class="mmenu-item--simple">
-									<a href="#">Pages</a>
+									<a asp-controller="Shop" asp-action="index">Shop</a>
 									<div class="mmenu-submenu">
 										<ul class="submenu-list">
 											<li>
-												<a href="product.html">Product page</a>
+												<a >Product page</a>
 												<ul>
 													<li><a href="product.html">Product page variant 1<span class="menu-label menu-label--color3">Popular</span></a></li>
 													<li><a href="product-2.html">Product page variant 2</a></li>
@@ -738,8 +738,24 @@
 			<div class="dropdn-content-block">
 				<div class="dropdn-close"><span class="js-dropdn-close">Close</span></div>
 				<ul>
-					<li><a href="account-create.html"><span>Log In</span><i class="icon-login"></i></a></li>
-					<li><a href="account-create.html"><span>Register</span><i class="icon-user2"></i></a></li>
+					@if (User.Identity.IsAuthenticated)
+					{
+						
+                           <li><span class="dropdown-item">@User.Identity.Name</span></li>
+                          <li>
+                           <a class="dropdown-item" asp-controller="Account" asp-action="ShowAuthenticated">My account</a>
+                        </li>
+                          <li>
+                        <a class="dropdown-item" asp-controller="Account" asp-action="LogOut">Log out</a>
+						</li>
+					}
+					else
+					{
+						
+						 <li><a asp-controller="Account" asp-action="Login"><span>Log In</span><i class="icon-login"></i></a></li>
+						<li><a asp-controller="Account" asp-action="Register"><span>Register</span><i class="icon-user2"></i></a></li>
+					}
+					
 					<li><a href="checkout.html"><span>Checkout</span><i class="icon-card"></i></a></li>
 				</ul>
 				<div class="dropdn-form-wrapper">
@@ -1159,5 +1175,6 @@
 		<script src="~/assets/js/vendor-special/instafeed.min.js"></script>
 		<script src="~/assets/js/vendor/vendor.min.js"></script>
 		<script src="~/assets/js/app-html.js"></script>
+		   @RenderSection("Scripts",false)
 </body>
 </html>

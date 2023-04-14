@@ -21,7 +21,7 @@ namespace Foxic.Controllers
 					.Include(p => p.ClothesImage).Include(t => t.ClothesTag).ThenInclude(tg => tg.Tag).Include(cs => cs.ClothesColorSize)
 									   .ThenInclude(c => c.Color)
 												.OrderByDescending(p => p.Id)
-													.Take(1)
+													.Take(8)
 														.ToList();
 			return View();
 		}
@@ -35,7 +35,7 @@ namespace Foxic.Controllers
 								 .Include(cs => cs.ClothesColorSize)
 									   .ThenInclude(c => c.Color)
 										   .Include(cs => cs.ClothesColorSize)
-												.ThenInclude(s => s.Size).Include(t => t.ClothesTag).ThenInclude(th => th.Tag).AsSingleQuery().FirstOrDefault(x => x.Id == id);
+												.ThenInclude(s => s.Size).Include(cc => cc.ClothesCatagory).ThenInclude(f => f.Catagory).Include(t => t.ClothesTag).ThenInclude(th => th.Tag).AsSingleQuery().FirstOrDefault(x => x.Id == id);
 
 			ViewBag.RelatedClothes = _context.Clothes
 		.Include(p => p.ClothesImage).Include(t => t.ClothesTag).ThenInclude(tg => tg.Tag).Include(cs => cs.ClothesColorSize)

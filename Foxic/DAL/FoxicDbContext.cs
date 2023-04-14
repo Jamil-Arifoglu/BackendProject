@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Foxic.DAL
 {
-	public class FoxicDbContext : IdentityDbContext
+	public class FoxicDbContext : IdentityDbContext<User>
 	{
 		public FoxicDbContext(DbContextOptions<FoxicDbContext> options) : base(options)
 		{
@@ -23,6 +23,8 @@ namespace Foxic.DAL
 		public DbSet<Size> Sizes { get; set; }
 		public DbSet<Color> Colors { get; set; }
 		public DbSet<Setting> Settings { get; set; }
+
+		public DbSet<Catagory> Catagory { get; set; }
 
 		public DbSet<Instruction> Instructions { get; set; }
 

@@ -1,4 +1,6 @@
-﻿using P230_Pronia.Entities;
+﻿
+
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Foxic.Entities
 {
@@ -10,8 +12,9 @@ namespace Foxic.Entities
 		public string Buttontext { get; set; }
 
 		public byte Order { get; set; }
-		public bool? IsVideo { get; set; }
 
 
+		[NotMapped]
+		public IFormFile? Image { get; set; }
 	}
 }

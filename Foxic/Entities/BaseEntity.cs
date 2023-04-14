@@ -1,7 +1,7 @@
-﻿namespace P230_Pronia.Entities
+﻿namespace Foxic.Entities
 {
-    public abstract class BaseEntity
-    {
-        public int Id { get; set; }
-    }
+	public abstract class BaseEntity
+	{
+		public int Id { get; set; }
+	}
 }

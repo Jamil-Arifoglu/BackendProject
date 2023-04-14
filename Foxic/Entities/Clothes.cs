@@ -1,4 +1,4 @@
-﻿using P230_Pronia.Entities;
+﻿
 
 namespace Foxic.Entities
 {
