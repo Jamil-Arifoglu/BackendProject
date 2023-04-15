@@ -117,9 +117,13 @@
 							</div>
 						</div>
 						<div class="prd-progress prd-block_info_item" data-left-in-stock="">
-							<div class="prd-progress-text">
-								Hurry Up! Left <span class="prd-progress-text-left js-stock-left">@Model.Stok</span> in stock
-							</div>
+							@foreach (var item in Model.ClothesColorSize)
+							{
+								<div class="prd-progress-text">
+									Hurry Up! Left <span class="prd-progress-text-left js-stock-left">@item.Quantity</span> in stock
+								</div>
+
+							}
 							<div class="prd-progress-text-null"></div>
 							<div class="prd-progress-bar-wrap progress">
 								<div class="prd-progress-bar progress-bar active" data-stock="50, 10, 30, 25, 1000, 15000" style="width: 53%;"></div>

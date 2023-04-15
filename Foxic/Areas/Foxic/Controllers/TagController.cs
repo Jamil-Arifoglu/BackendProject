@@ -67,7 +67,7 @@ namespace Foxic.Areas.Foxic.Controllers
             if (id == 0) return NotFound();
             Tag tags = _context.Tagas.FirstOrDefault(c => c.Id == id);
             if (tags is null) return NotFound();
-            bool duplicate = _context.Catagory.Any(c => c.Name == edited.Name);
+            bool duplicate = _context.Tagas.Any(c => c.Name == edited.Name);
             if (duplicate)
             {
                 ModelState.AddModelError("", "You cannot duplicate tags name");

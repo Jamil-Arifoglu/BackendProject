@@ -47,9 +47,6 @@ namespace Foxic.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<bool>("Availability")
-                        .HasColumnType("bit");
-
                     b.Property<string>("Barcode")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -87,9 +84,6 @@ namespace Foxic.Migrations
                     b.Property<string>("ShortDescription")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("Stok")
-                        .HasColumnType("int");
 
                     b.HasKey("Id");
 

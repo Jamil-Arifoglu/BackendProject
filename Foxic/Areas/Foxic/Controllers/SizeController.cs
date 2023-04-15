@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Foxic.Areas.Foxic.Controllers
 {
+    [Area("Foxic")]
     public class SizeController : Controller
     {
         private readonly FoxicDbContext _context;
