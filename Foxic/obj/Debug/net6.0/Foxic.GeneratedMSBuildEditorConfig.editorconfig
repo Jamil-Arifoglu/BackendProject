@@ -40,6 +40,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcQ2xvdGhlc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/Clothes/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcQ2xvdGhlc1xEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/Clothes/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcQ2xvdGhlc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -66,6 +70,26 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/Color/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcQ29sb3JcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/Contact/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcQ29udGFjdFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/Contact/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcQ29udGFjdFxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/Contact/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcQ29udGFjdFxEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/Contact/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcQ29udGFjdFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/Contact/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcQ29udGFjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/Setting/Create.cshtml]
@@ -160,12 +184,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Views/Account/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Nermin/source/repos/Foxic/Foxic/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Nermin/source/repos/Foxic/Foxic/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Views/Contact/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Nermin/source/repos/Foxic/Foxic/Views/Foxic/Index.cshtml]

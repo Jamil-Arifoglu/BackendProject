@@ -42,8 +42,8 @@ namespace Foxic.Areas.Foxic.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(ClothesVM newclothe)
+
+        public async Task<IActionResult> Create(ClothesVM? newclothe)
 
         {
             ViewBag.ClothesGlobalTabs = _context.ClothesGlobalTabs.AsEnumerable();
@@ -96,7 +96,7 @@ namespace Foxic.Areas.Foxic.Controllers
                 ClothesImage clothesImage = new()
                 {
                     IsMain = false,
-                    Path = await newclothe.FalsePhoto.CreateImage(imageFolderPath, "product")
+                    Path = await image.CreateImage(imageFolderPath, "products")
                 };
                 clother.ClothesImage.Add(clothesImage);
             }
@@ -104,7 +104,7 @@ namespace Foxic.Areas.Foxic.Controllers
             ClothesImage main = new()
             {
                 IsMain = true,
-                Path = await newclothe.MainPhoto.CreateImage(imageFolderPath, "product")
+                Path = await newclothe.MainPhoto.CreateImage(imageFolderPath, "products")
             };
             clother.ClothesImage.Add(main);
             ;
@@ -145,7 +145,7 @@ namespace Foxic.Areas.Foxic.Controllers
 
             _context.Clothes.Add(clother);
             _context.SaveChanges();
-            return RedirectToAction("Index", "Plants");
+            return RedirectToAction("Index", "Clothes");
         }
 
 
@@ -186,10 +186,10 @@ namespace Foxic.Areas.Foxic.Controllers
             if (clother is null) return BadRequest();
 
             IEnumerable<string> removables = clother.ClothesImage.Where(p => !edited.ImageIds.Contains(p.Id)).Select(i => i.Path).AsEnumerable();
-            string imageFolderPath = Path.Combine(_env.WebRootPath, "assets", "images");
+            string imageFolderPath = Path.Combine(_env.WebRootPath, "assets", "images", "skins", "fashion");
             foreach (string removable in removables)
             {
-                string path = Path.Combine(imageFolderPath, "website-images", removable);
+                string path = Path.Combine(imageFolderPath, "products", removable);
                 await Console.Out.WriteLineAsync(path);
                 Console.WriteLine(FileUpload.DeleteImage(path));
             }
@@ -243,7 +243,7 @@ namespace Foxic.Areas.Foxic.Controllers
                     ClothesImage plantImage = new()
                     {
                         IsMain = false,
-                        Path = await item.CreateImage(imageFolderPath, "product")
+                        Path = await item.CreateImage(imageFolderPath, "products")
                     };
                     clother.ClothesImage.Add(plantImage);
                 }
@@ -285,7 +285,7 @@ namespace Foxic.Areas.Foxic.Controllers
                     clother.ClothesTag.Add(ClothesTag);
                 }
             }
-
+            _context.Clothes.Add(clother);
             _context.SaveChanges();
             return RedirectToAction("Index");
         }
@@ -331,9 +331,18 @@ namespace Foxic.Areas.Foxic.Controllers
         {
             string photoPath = clother.ClothesImage.FirstOrDefault(p => p.IsMain == isMain).Path;
             string imagesFolderPath = Path.Combine(_env.WebRootPath, "assets", "images", "skins", "fashion");
-            string filePath = Path.Combine(imagesFolderPath, "product", photoPath);
+            string filePath = Path.Combine(imagesFolderPath, "products", photoPath);
             FileUpload.DeleteImage(filePath);
-            clother.ClothesImage.FirstOrDefault(p => p.IsMain == isMain).Path = await image.CreateImage(imagesFolderPath, "product");
+            clother.ClothesImage.FirstOrDefault(p => p.IsMain == isMain).Path = await image.CreateImage(imagesFolderPath, "products");
+        }
+
+        public IActionResult Detail(int id)
+        {
+            if (id == 0) return NotFound();
+            Clothes clothes = _context.Clothes.FirstOrDefault(s => s.Id == id);
+            if (clothes is null) return NotFound();
+            return View(clothes);
+
         }
 
 

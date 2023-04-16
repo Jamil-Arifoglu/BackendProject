@@ -1,5 +1,8 @@
 ﻿
 
+using Foxic.ViewModels;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace Foxic.Entities
 {
     public class Clothes : BaseEntity
@@ -25,6 +28,8 @@ namespace Foxic.Entities
         public List<ClothesColorSize> ClothesColorSize { get; set; }
         public List<ClothesCatagory> ClothesCatagory { get; set; }
         public List<ClothesTag> ClothesTag { get; set; }
+        [NotMapped]
+        public AddCartVM AddCart { get; set; }
 
 
         public Clothes()

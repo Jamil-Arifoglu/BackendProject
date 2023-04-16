@@ -28,9 +28,9 @@ namespace Foxic.ViewModels
         public int CollectionId { get; set; }
         public int ClothesGlobalTabId { get; set; }
         [NotMapped]
-        public IFormFile? MainPhoto { get; set; } = null!;
+        public IFormFile? MainPhoto { get; set; }
         [NotMapped]
-        public IFormFile? FalsePhoto { get; set; } = null!;
+        public IFormFile? FalsePhoto { get; set; }
         [NotMapped]
         public ICollection<IFormFile>? Images { get; set; }
         [NotMapped]
