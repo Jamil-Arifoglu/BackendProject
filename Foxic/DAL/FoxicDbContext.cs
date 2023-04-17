@@ -1,6 +1,7 @@
 ﻿using Foxic.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Foxic.ViewModels;
 
 namespace Foxic.DAL
 {
@@ -35,6 +36,8 @@ namespace Foxic.DAL
         public DbSet<BasketItem> BasketItems { get; set; }
 
         public DbSet<Order> Orders { get; set; }
+
+
 
 
     }

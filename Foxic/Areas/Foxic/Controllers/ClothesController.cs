@@ -42,10 +42,11 @@ namespace Foxic.Areas.Foxic.Controllers
         }
 
         [HttpPost]
-
+        [ActionName("Create")]
         public async Task<IActionResult> Create(ClothesVM? newclothe)
 
         {
+            return Json((newclothe));
             ViewBag.ClothesGlobalTabs = _context.ClothesGlobalTabs.AsEnumerable();
             ViewBag.Instruction = _context.Instructions.AsEnumerable();
             ViewBag.Catagory = _context.Catagory.AsEnumerable();
@@ -58,12 +59,12 @@ namespace Foxic.Areas.Foxic.Controllers
             {
                 return View();
             }
-            if (!newclothe.FalsePhoto.IsValidFile("image/") || !newclothe.MainPhoto.IsValidFile("image/"))
+            if (!newclothe.MainPhoto.IsValidFile("image/"))
             {
                 ModelState.AddModelError(string.Empty, "Please choose image file");
                 return View();
             }
-            if (!newclothe.FalsePhoto.IsValidLength(1) || !newclothe.MainPhoto.IsValidLength(1))
+            if (!newclothe.MainPhoto.IsValidLength(1))
             {
                 ModelState.AddModelError(string.Empty, "Please choose image which size is maximum 1MB");
                 return View();
@@ -78,10 +79,10 @@ namespace Foxic.Areas.Foxic.Controllers
                 Discount = newclothe.Discount,
                 DiscountPrice = newclothe.DiscountPrice,
                 SKU = newclothe.SKU,
-                InstructionId = newclothe.InstructionId,
-                ClothesGlobalTabId = newclothe.ClothesGlobalTabId,
                 Barcode = newclothe.Barcode,
+                InstructionId = newclothe.InstructionId,
                 CollectionId = newclothe.CollectionId,
+                ClothesGlobalTabId = newclothe.ClothesGlobalTabId
 
 
             };
@@ -107,7 +108,7 @@ namespace Foxic.Areas.Foxic.Controllers
                 Path = await newclothe.MainPhoto.CreateImage(imageFolderPath, "products")
             };
             clother.ClothesImage.Add(main);
-            ;
+
 
 
             string[] colorSizeQuantities = newclothe.ColorSizeQuantity.Split(',');
@@ -194,15 +195,15 @@ namespace Foxic.Areas.Foxic.Controllers
                 Console.WriteLine(FileUpload.DeleteImage(path));
             }
 
-            //TODO  You have to control validation: FileType and FileLength
+
             if (edited.MainPhoto is not null)
             {
                 await AdjustPlantPhotos(edited.MainPhoto, clother, true);
             }
-            else if (edited.FalsePhoto is not null)
-            {
-                await AdjustPlantPhotos(edited.FalsePhoto, clother, null);
-            }
+            //else if (edited.Images is not null)
+            //{
+            //    await AdjustPlantPhotos(edited.Images, clother, null);
+            //}
             string[] colorSizeQuantities = edited.ColorSizeQuantity.Split(',');
             foreach (string colorSizeQuantity in colorSizeQuantities)
             {

@@ -42,6 +42,8 @@ namespace Foxic.Controllers
 						   .ThenInclude(c => c.Color)
 									.OrderByDescending(p => p.Id)
 											.ToList();
+			ViewBag.Colors = clothes.ClothesColorSize.DistinctBy(p => p.ColorId).Select(p => new Color() { Id = p.ColorId, Name = p.Color.Name }).ToList();
+			ViewBag.Sizes = _context.Sizes.ToList();
 			ViewBag.Relateds = RelatedClothes(clother, clothes, id);
 			return View(clothes);
 		}

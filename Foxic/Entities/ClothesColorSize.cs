@@ -12,5 +12,13 @@ namespace Foxic.Entities
 		public Clothes Clothes { get; set; }
 		public Color Color { get; set; } = null!;
 		public Size Size { get; set; } = null!;
+
+		public ICollection<BasketItem> BasketItems { get; set; }
+
+		public ClothesColorSize()
+		{
+			BasketItems = new List<BasketItem>();
+
+		}
 	}
 }

@@ -17,6 +17,7 @@ namespace Foxic.ViewModels
         public decimal? DiscountPrice { get; set; }
         public string SKU { get; set; }
         public string Barcode { get; set; }
+        [NotMapped]
         public ICollection<int> CategoryIds { get; set; } = null!;
         [NotMapped]
         public ICollection<int> TagIds { get; set; } = null!;
@@ -24,13 +25,17 @@ namespace Foxic.ViewModels
         public ICollection<int> SizeId { get; set; } = null!;
         [NotMapped]
         public ICollection<int> ColorId { get; set; } = null!;
+
+        [NotMapped]
         public int InstructionId { get; set; }
+        [NotMapped]
         public int CollectionId { get; set; }
+        [NotMapped]
         public int ClothesGlobalTabId { get; set; }
         [NotMapped]
         public IFormFile? MainPhoto { get; set; }
-        [NotMapped]
-        public IFormFile? FalsePhoto { get; set; }
+        //[NotMapped]
+        //public IFormFile? FalsePhoto { get; set; }
         [NotMapped]
         public ICollection<IFormFile>? Images { get; set; }
         [NotMapped]
@@ -38,6 +43,9 @@ namespace Foxic.ViewModels
         [NotMapped]
 
         public ICollection<int>? ImageIds { get; set; }
+        public ICollection<ClothesColorSize> ClothesColorSizes { get; set; }
+        public string? ClothesColorSizeId { get; set; }
+
 
         public string? ColorSizeQuantity { get; set; }
 

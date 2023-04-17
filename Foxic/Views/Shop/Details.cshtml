@@ -168,14 +168,15 @@
 							</div>
 						</div>
 						<div class="order-0 order-md-100">
-							<form method="post" action="#">
+							<form asp-controller="Order" asp-action="AddBasket" asp-route-plantId="@Model.Id" method="post">
 								<div class="prd-block_options">
-									<div class="prd-color swatches">
+									<div class="prd-color color-option swatches">
 										<div class="option-label">Color:</div>
-										<select class="form-control hidden single-option-selector-modalQuickView" id="SingleOptionSelector-0" data-index="option1">
-											<option value="Beige" selected="selected">Beige</option>
-											<option value="Black">Black</option>
-											<option value="Red">Red</option>
+										<select class="form-control single-option-selector-modalQuickView" asp-for="AddCart.ColorId" asp-items="@(new SelectList(ViewBag.Colors,"Id","Name"))" id="SingleOptionSelector-0" data-index="option1">
+											
+									
+												
+											
 										</select>
 										<ul class="images-list js-size-list" data-select-id="SingleOptionSelector-0">
 											
@@ -191,10 +192,12 @@
 									</div>
 									<div class="prd-size swatches">
 										<div class="option-label">Size:</div>
-										<select class="form-control hidden single-option-selector-modalQuickView" id="SingleOptionSelector-1" data-index="option2">
-											<option value="Small" selected="selected">Small</option>
-											<option value="Medium">Medium</option>
-											<option value="Large">Large</option>
+										<select class="form-control  single-option-selector-modalQuickView" asp-for="AddCart.SizeId" data-callId="sizeId" id="SingleOptionSelector-1" data-index="option2">
+										@foreach (var item in Model.ClothesColorSize)
+											{
+												<option value="Medium">@item.Size.Name</option>
+
+											}
 										</select>
 										<ul class="size-list js-size-list" data-select-id="SingleOptionSelector-1">
 											<li class="active"><a href="#" data-value="Small"><span class="value">Small</span></a></li>
@@ -622,3 +625,44 @@
 		</div>
 	</div>
 </div>
+
+			@section Scripts{
+    <script>
+        const selects = document.querySelectorAll(".color-option .list li");
+        let sizeSelects;
+        selects.forEach(s => {
+            s.addEventListener("click", function () {
+                let sizes = document.querySelector(".size-option .list")
+                sizes.innerHTML = ""
+                let colorId = s.getAttribute("data-value");
+                var url = `/Order/GetSizes?clotherId=${@Model.Id}&colorId=${colorId}`;
+                fetch(url).then(response => response.json()).then(datas => {
+                    if (datas.status !== 404) {
+                        datas.forEach(data => {
+                            console.log(data)
+                            let li = document.createElement("li");
+                            li.className = "option"
+                            li.setAttribute("data-value", data.id)
+                            li.innerText = data.name;
+                            sizes.append(li)
+                        })
+                        sizeSelects = document.querySelectorAll(".size-option .list li")
+                        sizeSelects.forEach(size => {
+                            size.addEventListener("click", function () {
+                                let mainSize = document.querySelector("[data-callId='sizeId']")
+                                let option = document.createElement("option");
+                                option.value = size.getAttribute("data-value");
+                                option.innerText = size.innerText;
+                                option.setAttribute("selected","selected")
+                                console.log(mainSize)
+                                mainSize.append(option);
+                            })
+                        })
+                    }
+                });
+            })
+        })
+        if (sizeSelects) {
+        }
+    </script>
+	}

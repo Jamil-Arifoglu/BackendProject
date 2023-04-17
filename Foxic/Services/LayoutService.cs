@@ -1,5 +1,7 @@
 ﻿using Foxic.DAL;
+using Foxic.Entities;
 using Newtonsoft.Json;
+using P230_Pronia.ViewModels.Cookie;
 
 namespace Foxic.Services
 {
@@ -13,39 +15,39 @@ namespace Foxic.Services
 			_context = context;
 			_accessor = accessor;
 		}
-		//public List<Setting> GetSettings()
-		//{
-		//    List<Setting> settings = _context.Settings.ToList();
-		//    return settings;
-		//}
+		public List<Setting> GetSettings()
+		{
+			List<Setting> settings = _context.Settings.ToList();
+			return settings;
+		}
 
-		//public CookieBasketVM GetBasket()
-		//{
-		//    var cookies = _accessor.HttpContext.Request.Cookies["basket"];
-		//    CookieBasketVM basket=new();
-		//    if (cookies is not null)
-		//    {
-		//        basket = JsonConvert.DeserializeObject<CookieBasketVM>(cookies);
-		//        foreach (CookieBasketItemVM item in basket.CookieBasketItemVMs)
-		//        {
-		//            Plant plant = _context.Plants.FirstOrDefault(p => p.Id == item.Id);
-		//            if (plant is null)
-		//            {
-		//                basket.CookieBasketItemVMs.Remove(item);
-		//                basket.TotalPrice -= item.Quantity * item.Price;
-		//            }
-		//        }
-		//    }
-		//    return basket;
+		public CookieBasketVM GetBasket()
+		{
+			var cookies = _accessor.HttpContext.Request.Cookies["basket"];
+			CookieBasketVM basket = new();
+			if (cookies is not null)
+			{
+				basket = JsonConvert.DeserializeObject<CookieBasketVM>(cookies);
+				foreach (CookieBasketItemVM item in basket.CookieBasketItemVMs)
+				{
+					Clothes clother = _context.Clothes.FirstOrDefault(p => p.Id == item.Id);
+					if (clother is null)
+					{
+						basket.CookieBasketItemVMs.Remove(item);
+						basket.TotalPrice -= item.Quantity * item.Price;
+					}
+				}
+			}
+			return basket;
 
-		//}
+		}
 
-		//public List<Plant> GetPlants()
-		// {
+		public List<Clothes> GetClothes()
+		{
 
-		//     List<Plant> plant = _context.Plants.ToList();
-		//     return plant;
-		// }
+			List<Clothes> clother = _context.Clothes.ToList();
+			return clother;
+		}
 
 
 
