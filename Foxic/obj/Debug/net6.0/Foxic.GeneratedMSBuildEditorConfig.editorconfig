@@ -16,168 +16,168 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Nermin\source\repos\Foxic\Foxic
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/Category/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcQ2F0ZWdvcnlcQ3JlYXRlLmNzaHRtbA==
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/FoxicAdmin/Views/Category/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNBZG1pblxWaWV3c1xDYXRlZ29yeVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/Category/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcQ2F0ZWdvcnlcRGVsZXRlLmNzaHRtbA==
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/FoxicAdmin/Views/Category/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNBZG1pblxWaWV3c1xDYXRlZ29yeVxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/Category/Detail.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcQ2F0ZWdvcnlcRGV0YWlsLmNzaHRtbA==
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/FoxicAdmin/Views/Category/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNBZG1pblxWaWV3c1xDYXRlZ29yeVxEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/Category/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcQ2F0ZWdvcnlcRWRpdC5jc2h0bWw=
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/FoxicAdmin/Views/Category/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNBZG1pblxWaWV3c1xDYXRlZ29yeVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/Category/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/FoxicAdmin/Views/Category/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNBZG1pblxWaWV3c1xDYXRlZ29yeVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/Clothes/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcQ2xvdGhlc1xDcmVhdGUuY3NodG1s
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/FoxicAdmin/Views/Clothes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNBZG1pblxWaWV3c1xDbG90aGVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/Clothes/Detail.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcQ2xvdGhlc1xEZXRhaWwuY3NodG1s
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/FoxicAdmin/Views/Clothes/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNBZG1pblxWaWV3c1xDbG90aGVzXERldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/Clothes/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcQ2xvdGhlc1xFZGl0LmNzaHRtbA==
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/FoxicAdmin/Views/Clothes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNBZG1pblxWaWV3c1xDbG90aGVzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/Clothes/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcQ2xvdGhlc1xJbmRleC5jc2h0bWw=
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/FoxicAdmin/Views/Clothes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNBZG1pblxWaWV3c1xDbG90aGVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/Color/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcQ29sb3JcQ3JlYXRlLmNzaHRtbA==
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/FoxicAdmin/Views/Color/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNBZG1pblxWaWV3c1xDb2xvclxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/Color/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcQ29sb3JcRGVsZXRlLmNzaHRtbA==
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/FoxicAdmin/Views/Color/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNBZG1pblxWaWV3c1xDb2xvclxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/Color/Detail.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcQ29sb3JcRGV0YWlsLmNzaHRtbA==
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/FoxicAdmin/Views/Color/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNBZG1pblxWaWV3c1xDb2xvclxEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/Color/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcQ29sb3JcRWRpdC5jc2h0bWw=
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/FoxicAdmin/Views/Color/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNBZG1pblxWaWV3c1xDb2xvclxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/Color/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcQ29sb3JcSW5kZXguY3NodG1s
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/FoxicAdmin/Views/Color/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNBZG1pblxWaWV3c1xDb2xvclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/Contact/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcQ29udGFjdFxEZWxldGUuY3NodG1s
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/FoxicAdmin/Views/Contact/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNBZG1pblxWaWV3c1xDb250YWN0XERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/Contact/Detail.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcQ29udGFjdFxEZXRhaWwuY3NodG1s
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/FoxicAdmin/Views/Contact/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNBZG1pblxWaWV3c1xDb250YWN0XERldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/Contact/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcQ29udGFjdFxFZGl0LmNzaHRtbA==
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/FoxicAdmin/Views/Contact/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNBZG1pblxWaWV3c1xDb250YWN0XEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/Contact/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcQ29udGFjdFxJbmRleC5jc2h0bWw=
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/FoxicAdmin/Views/Contact/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNBZG1pblxWaWV3c1xDb250YWN0XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/Setting/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcU2V0dGluZ1xDcmVhdGUuY3NodG1s
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/FoxicAdmin/Views/Setting/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNBZG1pblxWaWV3c1xTZXR0aW5nXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/Setting/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcU2V0dGluZ1xEZWxldGUuY3NodG1s
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/FoxicAdmin/Views/Setting/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNBZG1pblxWaWV3c1xTZXR0aW5nXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/Setting/Detail.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcU2V0dGluZ1xEZXRhaWwuY3NodG1s
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/FoxicAdmin/Views/Setting/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNBZG1pblxWaWV3c1xTZXR0aW5nXERldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/Setting/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcU2V0dGluZ1xFZGl0LmNzaHRtbA==
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/FoxicAdmin/Views/Setting/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNBZG1pblxWaWV3c1xTZXR0aW5nXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/Setting/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcU2V0dGluZ1xJbmRleC5jc2h0bWw=
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/FoxicAdmin/Views/Setting/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNBZG1pblxWaWV3c1xTZXR0aW5nXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/FoxicAdmin/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNBZG1pblxWaWV3c1xTaGFyZWRcX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/Size/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcU2l6ZVxDcmVhdGUuY3NodG1s
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/FoxicAdmin/Views/Size/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNBZG1pblxWaWV3c1xTaXplXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/Size/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcU2l6ZVxEZWxldGUuY3NodG1s
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/FoxicAdmin/Views/Size/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNBZG1pblxWaWV3c1xTaXplXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/Size/Detail.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcU2l6ZVxEZXRhaWwuY3NodG1s
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/FoxicAdmin/Views/Size/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNBZG1pblxWaWV3c1xTaXplXERldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/Size/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcU2l6ZVxFZGl0LmNzaHRtbA==
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/FoxicAdmin/Views/Size/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNBZG1pblxWaWV3c1xTaXplXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/Size/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcU2l6ZVxJbmRleC5jc2h0bWw=
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/FoxicAdmin/Views/Size/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNBZG1pblxWaWV3c1xTaXplXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/Slider/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcU2xpZGVyXENyZWF0ZS5jc2h0bWw=
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/FoxicAdmin/Views/Slider/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNBZG1pblxWaWV3c1xTbGlkZXJcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/Slider/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcU2xpZGVyXERlbGV0ZS5jc2h0bWw=
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/FoxicAdmin/Views/Slider/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNBZG1pblxWaWV3c1xTbGlkZXJcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/Slider/Detail.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcU2xpZGVyXERldGFpbC5jc2h0bWw=
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/FoxicAdmin/Views/Slider/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNBZG1pblxWaWV3c1xTbGlkZXJcRGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/Slider/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcU2xpZGVyXEVkaXQuY3NodG1s
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/FoxicAdmin/Views/Slider/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNBZG1pblxWaWV3c1xTbGlkZXJcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/Slider/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcU2xpZGVyXEluZGV4LmNzaHRtbA==
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/FoxicAdmin/Views/Slider/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNBZG1pblxWaWV3c1xTbGlkZXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/Tag/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcVGFnXENyZWF0ZS5jc2h0bWw=
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/FoxicAdmin/Views/Tag/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNBZG1pblxWaWV3c1xUYWdcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/Tag/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcVGFnXERlbGV0ZS5jc2h0bWw=
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/FoxicAdmin/Views/Tag/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNBZG1pblxWaWV3c1xUYWdcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/Tag/Detail.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcVGFnXERldGFpbC5jc2h0bWw=
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/FoxicAdmin/Views/Tag/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNBZG1pblxWaWV3c1xUYWdcRGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/Tag/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcVGFnXEVkaXQuY3NodG1s
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/FoxicAdmin/Views/Tag/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNBZG1pblxWaWV3c1xUYWdcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/Tag/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcVGFnXEluZGV4LmNzaHRtbA==
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/FoxicAdmin/Views/Tag/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNBZG1pblxWaWV3c1xUYWdcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/FoxicAdmin/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNBZG1pblxWaWV3c1xfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/Foxic/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNcVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Areas/FoxicAdmin/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRm94aWNBZG1pblxWaWV3c1xfVmlld1N0YXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Nermin/source/repos/Foxic/Foxic/Views/Account/Detail.cshtml]
@@ -214,6 +214,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Nermin/source/repos/Foxic/Foxic/Views/Shop/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nermin/source/repos/Foxic/Foxic/Views/Wishlist/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2lzaGxpc3RcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Nermin/source/repos/Foxic/Foxic/Views/_ViewImports.cshtml]

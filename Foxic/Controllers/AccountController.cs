@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Foxic.ViewModels;
 using System.Data;
 using NuGet.Protocol.Plugins;
+using Foxic.Utilities.Roles;
 
 namespace Foxic.Controllers
 {
@@ -44,7 +45,7 @@ namespace Foxic.Controllers
 				}
 				return View();
 			}
-
+			await _userManager.AddToRoleAsync(user, Roles.Admin.ToString());
 			return RedirectToAction("Index", "Foxic");
 
 		}
@@ -52,34 +53,35 @@ namespace Foxic.Controllers
 		{
 			return View();
 		}
-
 		[HttpPost]
 		public async Task<IActionResult> Login(LoginVM login)
 		{
-			if (!ModelState.IsValid) return View();
-
-			User user = await _userManager.FindByNameAsync(login.Username);
-			//IList<string> roles = await _userManager.GetRolesAsync(user);
-
-			if (user is null)
+			if (!ModelState.IsValid)
 			{
-				ModelState.AddModelError("", "Username or password is incorrect");
-				return View();
-			}
-			Microsoft.AspNetCore.Identity.SignInResult result = await _signInManager.PasswordSignInAsync(user, login.Password, login.RememberMe, true);
-			if (!result.Succeeded)
-			{
-				if (result.IsLockedOut)
-				{
-					ModelState.AddModelError("", "Due to overtyring your account has been blocked for 5 minutes");
-					return View();
-				}
-				ModelState.AddModelError("", "Username or password is incorrect");
 				return View();
 			}
 
-			return RedirectToAction("Index", "Foxic");
+			var user = await _userManager.FindByNameAsync(login.Username);
+			if (user == null)
+			{
+				ModelState.AddModelError("", "Kullanıcı adı veya şifre hatalı");
+				return View();
+			}
 
+			var result = await _signInManager.PasswordSignInAsync(user, login.Password, login.RememberMe, true);
+			if (result.Succeeded)
+			{
+				return RedirectToAction("Index", "Foxic");
+			}
+
+			if (result.IsLockedOut)
+			{
+				ModelState.AddModelError("", "Hesabınız, 5 dakika boyunca kitlenmiştir");
+				return View();
+			}
+
+			ModelState.AddModelError("", "Kullanıcı adı veya şifre hatalı");
+			return View();
 		}
 
 		public async Task<IActionResult> Detail()
@@ -104,6 +106,12 @@ namespace Foxic.Controllers
 		{
 			return Json(User.Identity.IsAuthenticated);
 		}
+		//public async Task CreateRoles()
+		//{
+		//	await _roleManager.CreateAsync(new IdentityRole(Roles.Admin.ToString()));
+		//	await _roleManager.CreateAsync(new IdentityRole(Roles.Moderator.ToString()));
+		//	await _roleManager.CreateAsync(new IdentityRole(Roles.Member.ToString()));
+		//}
 
 	}
 }

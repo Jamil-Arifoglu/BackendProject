@@ -1,0 +1,35 @@
+﻿@model Foxic.Entities.Setting
+
+@{
+    ViewData["Title"] = "Creates";
+}
+
+<h1>Creates</h1>
+
+<h4>Setting</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" enctype="multipart/form-data" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="key" class="control-label"></label>
+                <input asp-for="key" class="form-control" />
+                <span asp-validation-for="key" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="value" class="control-label"></label>
+                <input asp-for="value" class="form-control" />
+                <span asp-validation-for="value" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
